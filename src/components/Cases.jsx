@@ -76,7 +76,7 @@ export default function Cases() {
                   <h3 className="text-base font-semibold text-warm-white">{c.company}</h3>
                   <span className="px-2.5 py-1 text-[10px] font-medium rounded-md bg-primary/10 text-primary/80">{c.tag}</span>
                 </div>
-                <p className="text-xs text-accent/50 mb-2 leading-relaxed">{c.pain}</p>
+                <p className="text-xs text-primary/50 mb-2 leading-relaxed">{c.pain}</p>
                 <div className="flex items-start gap-2 text-xs text-warm-gray leading-relaxed">
                   <ArrowRight size={12} className="text-primary/50 mt-0.5 shrink-0" />
                   {c.solution}

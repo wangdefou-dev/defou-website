@@ -15,7 +15,7 @@ const products = [
     title: '内部管理Agent',
     features: ['审批流程智能化', '会议纪要自动生成', '日报/周报智能汇总', '内部知识库即时问答'],
     badge: '热门',
-    accent: '#f472b6',
+    accent: '#d97706',
   },
   {
     icon: Megaphone,

@@ -47,7 +47,7 @@ function Particles() {
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
         ctx.fillStyle = p.warm
           ? `rgba(217, 119, 6, ${p.opacity})`
-          : `rgba(244, 114, 182, ${p.opacity * 0.6})`
+          : `rgba(180, 83, 9, ${p.opacity * 0.7})`
         ctx.fill()
 
         p.x += p.dx
@@ -87,7 +87,7 @@ function MeshGradients() {
   return (
     <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
       <div className="absolute -top-[30%] -left-[10%] w-[70%] h-[70%] rounded-full bg-[radial-gradient(ellipse,rgba(217,119,6,0.04),transparent_70%)] animate-[pulse-glow_8s_ease-in-out_infinite]" />
-      <div className="absolute top-[20%] -right-[15%] w-[60%] h-[60%] rounded-full bg-[radial-gradient(ellipse,rgba(244,114,182,0.03),transparent_70%)] animate-[pulse-glow_10s_ease-in-out_infinite_2s]" />
+      <div className="absolute top-[20%] -right-[15%] w-[60%] h-[60%] rounded-full bg-[radial-gradient(ellipse,rgba(180,83,9,0.03),transparent_70%)] animate-[pulse-glow_10s_ease-in-out_infinite_2s]" />
       <div className="absolute -bottom-[20%] left-[20%] w-[50%] h-[50%] rounded-full bg-[radial-gradient(ellipse,rgba(180,83,9,0.03),transparent_70%)] animate-[pulse-glow_12s_ease-in-out_infinite_4s]" />
     </div>
   )

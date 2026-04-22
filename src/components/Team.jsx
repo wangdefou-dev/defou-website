@@ -45,7 +45,7 @@ export default function Team() {
           className="relative rounded-2xl bg-[#1c1917]/50 border border-primary/10 p-8 mb-8 backdrop-blur-sm"
         >
           <div className="flex items-start gap-6">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shrink-0 text-[#09090b] text-xl font-bold">
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-primary-light flex items-center justify-center shrink-0 text-[#09090b] text-xl font-bold">
               {founder.name.charAt(0)}
             </div>
             <div>
