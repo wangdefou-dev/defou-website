@@ -28,15 +28,15 @@ function Particles() {
     resize()
     window.addEventListener('resize', resize)
 
-    for (let i = 0; i < 60; i++) {
+    for (let i = 0; i < 40; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        r: Math.random() * 1.5 + 0.5,
-        dx: (Math.random() - 0.5) * 0.3,
-        dy: (Math.random() - 0.5) * 0.3,
-        opacity: Math.random() * 0.5 + 0.1,
-        hue: Math.random() > 0.5 ? 220 : 260,
+        r: Math.random() * 1.2 + 0.3,
+        dx: (Math.random() - 0.5) * 0.2,
+        dy: (Math.random() - 0.5) * 0.2,
+        opacity: Math.random() * 0.3 + 0.05,
+        warm: Math.random() > 0.3,
       })
     }
 
@@ -45,7 +45,9 @@ function Particles() {
       particles.forEach(p => {
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
-        ctx.fillStyle = `hsla(${p.hue}, 80%, 70%, ${p.opacity})`
+        ctx.fillStyle = p.warm
+          ? `rgba(217, 119, 6, ${p.opacity})`
+          : `rgba(244, 114, 182, ${p.opacity * 0.6})`
         ctx.fill()
 
         p.x += p.dx
@@ -57,11 +59,11 @@ function Particles() {
       particles.forEach((a, i) => {
         particles.slice(i + 1).forEach(b => {
           const dist = Math.hypot(a.x - b.x, a.y - b.y)
-          if (dist < 120) {
+          if (dist < 100) {
             ctx.beginPath()
             ctx.moveTo(a.x, a.y)
             ctx.lineTo(b.x, b.y)
-            ctx.strokeStyle = `rgba(100, 140, 255, ${0.06 * (1 - dist / 120)})`
+            ctx.strokeStyle = `rgba(217, 119, 6, ${0.03 * (1 - dist / 100)})`
             ctx.lineWidth = 0.5
             ctx.stroke()
           }
@@ -84,9 +86,9 @@ function Particles() {
 function MeshGradients() {
   return (
     <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-      <div className="absolute -top-[30%] -left-[10%] w-[70%] h-[70%] rounded-full bg-[radial-gradient(ellipse,rgba(59,130,246,0.08),transparent_70%)] animate-[pulse-glow_8s_ease-in-out_infinite]" />
-      <div className="absolute top-[20%] -right-[15%] w-[60%] h-[60%] rounded-full bg-[radial-gradient(ellipse,rgba(139,92,246,0.06),transparent_70%)] animate-[pulse-glow_10s_ease-in-out_infinite_2s]" />
-      <div className="absolute -bottom-[20%] left-[20%] w-[50%] h-[50%] rounded-full bg-[radial-gradient(ellipse,rgba(59,130,246,0.05),transparent_70%)] animate-[pulse-glow_12s_ease-in-out_infinite_4s]" />
+      <div className="absolute -top-[30%] -left-[10%] w-[70%] h-[70%] rounded-full bg-[radial-gradient(ellipse,rgba(217,119,6,0.04),transparent_70%)] animate-[pulse-glow_8s_ease-in-out_infinite]" />
+      <div className="absolute top-[20%] -right-[15%] w-[60%] h-[60%] rounded-full bg-[radial-gradient(ellipse,rgba(244,114,182,0.03),transparent_70%)] animate-[pulse-glow_10s_ease-in-out_infinite_2s]" />
+      <div className="absolute -bottom-[20%] left-[20%] w-[50%] h-[50%] rounded-full bg-[radial-gradient(ellipse,rgba(180,83,9,0.03),transparent_70%)] animate-[pulse-glow_12s_ease-in-out_infinite_4s]" />
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { TrendingUp, ArrowRight, Quote } from 'lucide-react'
+import { TrendingUp, ArrowRight } from 'lucide-react'
 import { useEffect, useState, useRef } from 'react'
 
 function AnimNum({ target, suffix = '' }) {
@@ -25,37 +25,22 @@ function AnimNum({ target, suffix = '' }) {
 
 const cases = [
   {
-    company: '华益集团',
-    tag: '招聘提效',
+    company: '华益集团', tag: '招聘提效',
     pain: 'HR每月800+简历，筛选效率低',
     solution: '部署招聘提效Agent，自动完成简历初筛与匹配打分',
-    results: [
-      { num: '70', suffix: '%', label: '筛选效率提升' },
-      { num: '40', suffix: '%', label: '招聘周期缩短' },
-    ],
-    accent: '#3b82f6',
+    results: [{ num: '70', suffix: '%', label: '筛选效率提升' }, { num: '40', suffix: '%', label: '招聘周期缩短' }],
   },
   {
-    company: '某电商公司',
-    tag: '新媒体运营',
+    company: '某电商公司', tag: '新媒体运营',
     pain: '内容产能不足，多平台运营成本高',
     solution: '引入新媒体运营Agent辅助选题与文案生成',
-    results: [
-      { num: '3', suffix: 'x', label: '内容产出量提升' },
-      { num: '50', suffix: '%', label: '人力成本降低' },
-    ],
-    accent: '#f472b6',
+    results: [{ num: '3', suffix: 'x', label: '内容产出量提升' }, { num: '50', suffix: '%', label: '人力成本降低' }],
   },
   {
-    company: '某集团企业',
-    tag: 'AI转型陪跑',
+    company: '某集团企业', tag: 'AI转型陪跑',
     pain: '管理层认同AI但缺乏落地能力',
     solution: '3个月AI转型陪跑，从场景筛选到Agent部署全程支持',
-    results: [
-      { num: '3', suffix: '个', label: 'AI场景上线' },
-      { num: '100', suffix: '%', label: '自主迭代能力' },
-    ],
-    accent: '#10b981',
+    results: [{ num: '3', suffix: '个', label: 'AI场景上线' }, { num: '100', suffix: '%', label: '自主迭代能力' }],
   },
 ]
 
@@ -71,11 +56,10 @@ export default function Cases() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-5 tracking-tight">
-            客户
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">成功案例</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-warm-white mb-5 tracking-tight">
+            客户<span className="text-primary">成功案例</span>
           </h2>
-          <p className="text-white/40 text-lg">真实数据验证，可衡量的业务价值</p>
+          <p className="text-warm-gray text-lg">真实数据验证，可衡量的业务价值</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-5">
@@ -84,38 +68,29 @@ export default function Cases() {
               key={c.company}
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-1"
-              onMouseEnter={e => e.currentTarget.style.boxShadow = `0 20px 60px -15px ${c.accent}20`}
-              onMouseLeave={e => e.currentTarget.style.boxShadow = 'none'}
+              transition={{ duration: 0.6, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
+              className="group glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_-15px_rgba(217,119,6,0.08)]"
             >
-              <div className="absolute top-0 left-0 right-0 h-px" style={{ background: `linear-gradient(90deg, transparent, ${c.accent}50, transparent)` }} />
-
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-base font-semibold text-white">{c.company}</h3>
-                  <span className="px-2.5 py-1 text-[10px] font-medium rounded-md" style={{ background: `${c.accent}15`, color: `${c.accent}cc` }}>
-                    {c.tag}
-                  </span>
+                  <h3 className="text-base font-semibold text-warm-white">{c.company}</h3>
+                  <span className="px-2.5 py-1 text-[10px] font-medium rounded-md bg-primary/10 text-primary/80">{c.tag}</span>
                 </div>
-                <div className="flex items-start gap-2 mb-2">
-                  <Quote size={12} className="text-white/20 mt-0.5 shrink-0 rotate-180" />
-                  <p className="text-xs text-red-300/60 leading-relaxed">{c.pain}</p>
-                </div>
-                <div className="flex items-start gap-2 text-xs text-white/40 leading-relaxed">
-                  <ArrowRight size={12} className="text-emerald-400/60 mt-0.5 shrink-0" />
+                <p className="text-xs text-accent/50 mb-2 leading-relaxed">{c.pain}</p>
+                <div className="flex items-start gap-2 text-xs text-warm-gray leading-relaxed">
+                  <ArrowRight size={12} className="text-primary/50 mt-0.5 shrink-0" />
                   {c.solution}
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 border-t border-white/5">
+              <div className="grid grid-cols-2 border-t border-white/[0.03]">
                 {c.results.map(r => (
-                  <div key={r.label} className="p-5 text-center border-r last:border-r-0 border-white/5">
-                    <div className="text-2xl font-bold text-white flex items-center justify-center gap-1">
-                      <TrendingUp size={14} style={{ color: c.accent }} />
+                  <div key={r.label} className="p-5 text-center border-r last:border-r-0 border-white/[0.03]">
+                    <div className="text-2xl font-bold text-warm-white flex items-center justify-center gap-1">
+                      <TrendingUp size={14} className="text-primary/60" />
                       <AnimNum target={r.num} suffix={r.suffix} />
                     </div>
-                    <div className="text-[11px] text-white/30 mt-1">{r.label}</div>
+                    <div className="text-[11px] text-text-muted mt-1">{r.label}</div>
                   </div>
                 ))}
               </div>
