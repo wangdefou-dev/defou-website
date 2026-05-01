@@ -5,29 +5,25 @@ import { Crown, Code, Server, BarChart3 } from 'lucide-react'
 const coreTeam = [
   {
     icon: Crown,
-    name: '王阳',
-    alias: '得否',
+    name: '得否',
     role: '创始人',
     desc: '10 年+ 资深运营专家，前搜狐新闻，多家企业 AI 转型顾问',
   },
   {
     icon: Code,
-    name: '刘瀚轩',
-    alias: 'Hoody',
+    name: 'Hoody',
     role: '技术合伙人',
     desc: '前字节跳动资深研发，剪映中国用户增长负责人，制造业 AI 增长顾问',
   },
   {
     icon: Server,
-    name: '马钰喆',
-    alias: '金尘马',
+    name: '金尘马',
     role: '技术合伙人',
     desc: '北京交大计算机硕士，前美团高级研发工程师，前阿里巴巴高级研发工程师',
   },
   {
     icon: BarChart3,
-    name: '戚桂川',
-    alias: '阿川',
+    name: '阿川',
     role: '策略合伙人',
     desc: '前美团商业策略分析专家',
   },
@@ -84,10 +80,7 @@ export default function Team() {
                 <div className="w-11 h-11 rounded-xl bg-primary/8 flex items-center justify-center mb-4">
                   <Icon size={20} className="text-primary/60" />
                 </div>
-                <div className="flex items-baseline gap-2 mb-1">
-                  <h4 className="text-lg font-bold text-warm-white">{m.name}</h4>
-                  {m.alias && <span className="text-xs text-text-muted/50 italic">{m.alias}</span>}
-                </div>
+                <h4 className="text-lg font-bold text-warm-white mb-1">{m.name}</h4>
                 <span className="inline-block px-2 py-0.5 text-[10px] rounded bg-primary/10 text-primary/70 mb-3">{m.role}</span>
                 <p className="text-xs text-text-muted/60 leading-relaxed">{m.desc}</p>
               </motion.div>
