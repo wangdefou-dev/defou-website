@@ -10,6 +10,9 @@ const navItems = [
   { label: '费用', href: '#pricing' },
 ]
 
+const navLinkClass = "px-4 py-2 text-sm font-bold text-warm-gray hover:text-warm-white rounded-lg hover:bg-white/[0.03] transition-all duration-300"
+const navMobileLinkClass = "px-4 py-3 font-bold text-warm-gray hover:text-warm-white hover:bg-white/[0.03] rounded-xl transition-all"
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -29,7 +32,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-1">
           {navItems.map(item => (
-            <a key={item.href} href={item.href} className="px-4 py-2 text-sm text-warm-gray hover:text-warm-white rounded-lg hover:bg-white/[0.03] transition-all duration-300">
+            <a key={item.href} href={item.href} className={navLinkClass}>
               {item.label}
             </a>
           ))}
@@ -47,7 +50,7 @@ export default function Navbar() {
         <div className="md:hidden bg-[#09090b]/95 backdrop-blur-2xl border-b border-white/[0.04]">
           <div className="px-6 py-6 flex flex-col gap-2">
             {navItems.map(item => (
-              <a key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="px-4 py-3 text-warm-gray hover:text-warm-white hover:bg-white/[0.03] rounded-xl transition-all">
+              <a key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className={navMobileLinkClass}>
                 {item.label}
               </a>
             ))}

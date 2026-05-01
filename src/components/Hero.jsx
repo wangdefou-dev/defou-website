@@ -64,11 +64,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.24, ease: [0.16, 1, 0.3, 1] }}
-          className="text-lg md:text-xl text-warm-gray max-w-2xl mx-auto mb-14 leading-relaxed"
+          className="text-lg md:text-xl text-warm-gray max-w-3xl mx-auto mb-14 leading-relaxed"
         >
-          AI不是未来，是现在。从企业培训、战略咨询、AI转型陪跑到智能体开发，
-          <br className="hidden md:block" />
-          助力企业高效拥抱人工智能时代。
+          AI 不再是选择题，而是必答题。<br />从战略咨询、企业培训、AI 转型陪跑到智能体开发，助力企业高效拥抱人工智能时代。
         </motion.p>
 
         <motion.div
@@ -93,9 +91,9 @@ export default function Hero() {
           className="mt-24 grid grid-cols-3 gap-8 max-w-md mx-auto"
         >
           {[
-            { num: '87', suffix: '%', desc: '企业认为AI是战略重点' },
-            { num: '3', suffix: 'x', desc: 'AI企业运营效率提升' },
-            { num: '70', suffix: '%', desc: 'AI项目未能落地' },
+            { num: '40', suffix: '%', desc: '年底企业应用嵌入AI智能体' },
+            { num: '22', suffix: '%', desc: '先行企业生产效率提升' },
+            { num: '70', suffix: '%', desc: '营销周期缩短幅度' },
           ].map((item, i) => (
             <motion.div
               key={item.desc}

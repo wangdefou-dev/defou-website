@@ -25,22 +25,16 @@ function AnimNum({ target, suffix = '' }) {
 
 const cases = [
   {
-    company: '华益集团', tag: '招聘提效',
-    pain: 'HR每月800+简历，筛选效率低',
-    solution: '部署招聘提效Agent，自动完成简历初筛与匹配打分',
+    company: '深圳华益集团', tag: '招聘提效',
+    pain: '月处理 800+ 份简历，筛选效率低',
+    solution: '部署招聘 Agent，自动完成简历初筛与匹配打分',
     results: [{ num: '70', suffix: '%', label: '筛选效率提升' }, { num: '40', suffix: '%', label: '招聘周期缩短' }],
   },
   {
-    company: '某电商公司', tag: '新媒体运营',
+    company: '澳门中西创新学院', tag: '新媒体运营',
     pain: '内容产能不足，多平台运营成本高',
-    solution: '引入新媒体运营Agent辅助选题与文案生成',
-    results: [{ num: '3', suffix: 'x', label: '内容产出量提升' }, { num: '50', suffix: '%', label: '人力成本降低' }],
-  },
-  {
-    company: '某集团企业', tag: 'AI转型陪跑',
-    pain: '管理层认同AI但缺乏落地能力',
-    solution: '3个月AI转型陪跑，从场景筛选到Agent部署全程支持',
-    results: [{ num: '3', suffix: '个', label: 'AI场景上线' }, { num: '100', suffix: '%', label: '自主迭代能力' }],
+    solution: '引入新媒体 Agent 辅助选题与文案生成',
+    results: [{ num: '3', suffix: 'x', label: '内容产出量提升' }, { num: '50', suffix: '%', label: '运营人力成本降低' }],
   },
 ]
 
@@ -48,7 +42,7 @@ export default function Cases() {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true })
 
   return (
-    <section id="cases" className="relative py-20 px-6" ref={ref}>
+    <section id="cases" className="relative py-24 px-6" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -59,10 +53,10 @@ export default function Cases() {
           <h2 className="text-4xl md:text-5xl font-bold text-warm-white mb-5 tracking-tight">
             客户<span className="text-primary">成功案例</span>
           </h2>
-          <p className="text-warm-gray text-lg">真实数据验证，可衡量的业务价值</p>
+          <p className="text-warm-gray text-lg">从招聘提效到全面转型，用数字说话</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
           {cases.map((c, i) => (
             <motion.div
               key={c.company}

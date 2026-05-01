@@ -6,6 +6,7 @@ import Services from './components/Services'
 import Products from './components/Products'
 import ServiceDetails from './components/ServiceDetails'
 import Cases from './components/Cases'
+import Quote from './components/Quote'
 import Process from './components/Process'
 import Team from './components/Team'
 import Pricing from './components/Pricing'
@@ -106,6 +107,7 @@ export default function App() {
         <Products />
         <ServiceDetails />
         <Cases />
+        <Quote />
         <Process />
         <Team />
         <Pricing />
