@@ -46,7 +46,7 @@ export default function Contact() {
               })}
             </div>
 
-            <p className="text-xs text-text-muted/50 mb-8">联系人：王阳</p>
+            <p className="text-xs text-text-muted/50 mb-8">联系人：得否</p>
 
             <a href="mailto:wangyang@defou.ai" className="group inline-flex items-center gap-2 px-10 py-4 rounded-2xl bg-primary hover:bg-primary-light text-[#09090b] font-semibold text-lg transition-all duration-300 hover:shadow-[0_0_40px_rgba(217,119,6,0.2)]">
               立即联系
