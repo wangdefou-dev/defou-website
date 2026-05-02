@@ -65,7 +65,7 @@ export default function Pricing() {
             <button
               key={tab}
               onClick={() => setActiveTab(i)}
-              className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${activeTab === i ? 'bg-primary text-[#09090b]' : 'text-warm-gray hover:text-warm-white hover:bg-white/[0.04] border border-white/[0.05]'}`}
+              className={`px-5 py-2.5 rounded-xl text-base font-medium transition-all duration-300 ${activeTab === i ? 'bg-primary text-[#09090b]' : 'text-warm-gray hover:text-warm-white hover:bg-white/[0.04] border border-white/[0.05]'}`}
             >
               {tab}
             </button>
@@ -88,8 +88,8 @@ export default function Pricing() {
               </div>
               {consultTraining.consult.map(item => (
                 <div key={item.name} className="flex items-center justify-between py-4 border-t border-white/[0.06]">
-                  <span className="text-warm-white/80 font-medium">{item.name}</span>
-                  <span className="font-mono text-primary/80 font-semibold">¥{item.price}</span>
+                  <span className="text-warm-white/80 font-medium text-base">{item.name}</span>
+                  <span className="font-mono text-primary/80 font-semibold text-base">¥{item.price}</span>
                 </div>
               ))}
             </div>
@@ -102,8 +102,8 @@ export default function Pricing() {
               </div>
               {consultTraining.training.map(item => (
                 <div key={item.name} className="flex items-center justify-between py-4 border-t border-white/[0.06]">
-                  <span className="text-warm-white/80 font-medium">{item.name}</span>
-                  <span className="font-mono text-primary/80 font-semibold">¥{item.price}</span>
+                  <span className="text-warm-white/80 font-medium text-base">{item.name}</span>
+                  <span className="font-mono text-primary/80 font-semibold text-base">¥{item.price}</span>
                 </div>
               ))}
             </div>
@@ -122,14 +122,14 @@ export default function Pricing() {
                 <div>
                   <span className="text-warm-white font-semibold">{p.name}</span>
                 </div>
-                <div className="text-sm text-warm-gray">
+                <div className="text-base text-warm-gray">
                   {p.before} → <span className="text-primary/80 font-medium">{p.after}</span>
                 </div>
-                <div className="text-xs text-text-muted/50 hidden md:block">{p.pain}</div>
-                <div className="text-right font-mono text-primary/80 font-semibold">¥{p.price}</div>
+                <div className="text-sm text-text-muted/50 hidden md:block">{p.pain}</div>
+                <div className="text-right font-mono text-primary/80 font-semibold text-base">¥{p.price}</div>
               </div>
             ))}
-            <p className="text-xs text-text-muted/40 mt-6 px-4">多产品打包有折扣 / 定制开发 ¥20,000 起 / 算力充值按量计费</p>
+            <p className="text-sm text-text-muted/40 mt-6 px-4">多产品打包有折扣 / 定制开发 ¥20,000 起 / 算力充值按量计费</p>
           </motion.div>
         )}
 
@@ -145,9 +145,9 @@ export default function Pricing() {
                 key={c.plan}
                 className={`glass-card rounded-2xl p-8 transition-all duration-500 hover:-translate-y-1 ${c.featured ? 'border-primary/15 hover:shadow-[0_20px_50px_-15px_rgba(217,119,6,0.1)]' : ''}`}
               >
-                <span className="font-mono text-xs text-primary/50 tracking-widest uppercase">{c.plan}</span>
+                <span className="font-mono text-sm text-primary/50 tracking-widest uppercase">{c.plan}</span>
                 <h3 className="text-xl font-bold text-warm-white mt-3 mb-2">{c.name}</h3>
-                <p className="text-sm text-warm-gray mb-6">{c.scope}</p>
+                <p className="text-base text-warm-gray mb-6">{c.scope}</p>
                 <div className="text-4xl font-bold text-warm-white">
                   <span className="text-sm text-text-muted font-normal">¥</span>{c.price}
                 </div>
@@ -172,18 +172,18 @@ export default function Pricing() {
                 >
                   {pkg.featured && (
                     <div className="mb-4">
-                      <span className="px-4 py-1.5 text-[10px] font-semibold rounded-full bg-primary text-[#09090b]">推荐</span>
+                      <span className="px-4 py-1.5 text-xs font-semibold rounded-full bg-primary text-[#09090b]">推荐</span>
                     </div>
                   )}
                   <div className="w-12 h-12 mx-auto mb-5 rounded-xl bg-primary/8 flex items-center justify-center group-hover:bg-primary/12 transition-colors">
                     <Icon size={22} className="text-primary/70" />
                   </div>
                   <h3 className="text-xl font-bold text-warm-white mb-2">{pkg.name}</h3>
-                  <p className="text-sm text-warm-gray mb-6">{pkg.desc}</p>
+                  <p className="text-base text-warm-gray mb-6">{pkg.desc}</p>
                   <div className="text-3xl font-bold text-warm-white mb-6">
-                    <span className="text-xs text-text-muted font-normal">¥</span>{pkg.price}
+                    <span className="text-sm text-text-muted font-normal">¥</span>{pkg.price}
                   </div>
-                  <a href="#contact" className="flex items-center justify-center gap-1.5 w-full py-3 rounded-xl text-sm transition-all duration-300 border border-white/[0.05] text-warm-gray hover:text-warm-white hover:border-primary/25 hover:bg-primary/5">
+                  <a href="#contact" className="flex items-center justify-center gap-1.5 w-full py-3 rounded-xl text-base transition-all duration-300 border border-white/[0.05] text-warm-gray hover:text-warm-white hover:border-primary/25 hover:bg-primary/5">
                     了解详情 <ArrowRight size={13} />
                   </a>
                 </div>
@@ -196,7 +196,7 @@ export default function Pricing() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center text-xs text-text-muted/50 mt-10"
+          className="text-center text-sm text-text-muted/50 mt-10"
         >
           具体费用以实际需求沟通后的正式报价为准
         </motion.p>

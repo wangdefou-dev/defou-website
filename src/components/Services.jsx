@@ -46,9 +46,9 @@ export default function Services() {
                     <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-primary/8 flex items-center justify-center group-hover:bg-primary/12 transition-colors">
                       <Icon size={20} className="text-primary/70" />
                     </div>
-                    <div className="text-xs font-mono text-primary/60 mb-2">{step.num}</div>
-                    <h3 className="text-warm-white/90 font-semibold mb-2 text-sm">{step.title}</h3>
-                    <p className="text-text-muted text-xs leading-relaxed">{step.desc}</p>
+                    <div className="text-sm font-mono text-primary/60 mb-2">{step.num}</div>
+                    <h3 className="text-warm-white/90 font-semibold mb-2 text-base">{step.title}</h3>
+                    <p className="text-text-muted text-sm leading-relaxed">{step.desc}</p>
                   </div>
                 </motion.div>
               )

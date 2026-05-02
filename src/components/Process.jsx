@@ -46,11 +46,11 @@ export default function Process() {
                 </div>
 
                 <div className="glass-card glass-card-hover rounded-2xl p-6 transition-all duration-500 hover:-translate-y-1">
-                  <div className="text-xs font-mono text-primary/60 mb-2">{step.period}</div>
-                  <h3 className="text-base font-semibold text-warm-white/90 mb-4">{step.title}</h3>
+                  <div className="text-sm font-mono text-primary/60 mb-2">{step.period}</div>
+                  <h3 className="text-lg font-semibold text-warm-white/90 mb-4">{step.title}</h3>
                   <ul className="space-y-2.5">
                     {step.items.map(item => (
-                      <li key={item} className="text-sm text-text-muted flex items-center gap-2">
+                      <li key={item} className="text-base text-text-muted flex items-center gap-2">
                         <div className="w-1 h-1 rounded-full bg-primary/40 shrink-0" />
                         {item}
                       </li>

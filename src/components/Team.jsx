@@ -63,7 +63,7 @@ export default function Team() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-6"
         >
-          <h3 className="text-xs font-mono text-primary/50 tracking-widest uppercase mb-5">Core Team · 核心团队</h3>
+          <h3 className="text-sm font-mono text-primary/50 tracking-widest uppercase mb-5">Core Team · 核心团队</h3>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
@@ -81,8 +81,8 @@ export default function Team() {
                   <Icon size={20} className="text-primary/60" />
                 </div>
                 <h4 className="text-lg font-bold text-warm-white mb-1">{m.name}</h4>
-                <span className="inline-block px-2 py-0.5 text-[10px] rounded bg-primary/10 text-primary/70 mb-3">{m.role}</span>
-                <p className="text-xs text-text-muted/60 leading-relaxed">{m.desc}</p>
+                <span className="inline-block px-2 py-0.5 text-xs rounded bg-primary/10 text-primary/70 mb-3">{m.role}</span>
+                <p className="text-sm text-text-muted/60 leading-relaxed">{m.desc}</p>
               </motion.div>
             )
           })}
@@ -94,8 +94,8 @@ export default function Team() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mb-6"
         >
-          <h3 className="text-xs font-mono text-primary/50 tracking-widest uppercase mb-5">Expert Faculty · 讲师团队</h3>
-          <p className="text-sm text-warm-gray mb-6">横跨学术界与产业界，覆盖 AI 技术、大数据、商业策略、组织管理、医疗健康等多领域</p>
+          <h3 className="text-sm font-mono text-primary/50 tracking-widest uppercase mb-5">Expert Faculty · 讲师团队</h3>
+          <p className="text-base text-warm-gray mb-6">横跨学术界与产业界，覆盖 AI 技术、大数据、商业策略、组织管理、医疗健康等多领域</p>
         </motion.div>
 
         <div className="space-y-0">
@@ -107,9 +107,9 @@ export default function Team() {
               transition={{ duration: 0.5, delay: 0.35 + i * 0.06, ease: [0.16, 1, 0.3, 1] }}
               className="grid grid-cols-[120px_1fr_auto] md:grid-cols-[140px_1fr_100px] items-center gap-4 py-4 border-t border-white/[0.06] hover:bg-white/[0.02] transition-colors px-4 -mx-4 rounded-lg"
             >
-              <h4 className="text-warm-white/90 font-semibold text-sm">{l.name}</h4>
-              <p className="text-xs text-text-muted/60 leading-relaxed">{l.title}</p>
-              <span className="font-mono text-[10px] tracking-widest uppercase text-text-muted/40 justify-self-end">{l.tag}</span>
+              <h4 className="text-warm-white/90 font-semibold text-base">{l.name}</h4>
+              <p className="text-sm text-text-muted/60 leading-relaxed">{l.title}</p>
+              <span className="font-mono text-xs tracking-widest uppercase text-text-muted/40 justify-self-end">{l.tag}</span>
             </motion.div>
           ))}
         </div>

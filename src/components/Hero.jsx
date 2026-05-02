@@ -105,7 +105,7 @@ export default function Hero() {
               <div className="text-3xl md:text-4xl font-bold text-warm-white">
                 <CountUp target={item.num} suffix={item.suffix} />
               </div>
-              <div className="text-xs text-text-muted mt-2">{item.desc}</div>
+              <div className="text-sm text-text-muted mt-2">{item.desc}</div>
             </motion.div>
           ))}
         </motion.div>

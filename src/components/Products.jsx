@@ -106,21 +106,21 @@ export default function Products() {
                     <div>
                       <div className="flex items-baseline gap-2">
                         <h3 className="text-xl font-bold text-warm-white">{product.name}</h3>
-                        <span className="text-xs text-text-muted/50 font-mono italic">{product.en}</span>
+                        <span className="text-sm text-text-muted/50 font-mono italic">{product.en}</span>
                       </div>
-                      <p className="text-xs text-primary/60 mt-0.5">{product.subtitle}</p>
+                      <p className="text-sm text-primary/60 mt-0.5">{product.subtitle}</p>
                     </div>
                   </div>
-                  <span className="px-2.5 py-1 text-[10px] font-semibold rounded-md" style={{ background: `${product.accent}12`, color: `${product.accent}cc` }}>
+                  <span className="px-2.5 py-1 text-xs font-semibold rounded-md" style={{ background: `${product.accent}12`, color: `${product.accent}cc` }}>
                     {product.badge}
                   </span>
                 </div>
 
-                <p className="text-sm text-warm-gray/80 mb-5 leading-relaxed">{product.tagline}</p>
+                <p className="text-base text-warm-gray/80 mb-5 leading-relaxed">{product.tagline}</p>
 
                 <ul className="space-y-3">
                   {product.features.map(f => (
-                    <li key={f} className="flex items-center gap-3 text-warm-gray text-sm">
+                    <li key={f} className="flex items-center gap-3 text-warm-gray text-base">
                       <div className="w-1 h-1 rounded-full shrink-0" style={{ background: `${product.accent}60` }} />
                       {f}
                     </li>

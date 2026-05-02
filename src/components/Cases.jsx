@@ -67,11 +67,11 @@ export default function Cases() {
             >
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-base font-semibold text-warm-white">{c.company}</h3>
-                  <span className="px-2.5 py-1 text-[10px] font-medium rounded-md bg-primary/10 text-primary/80">{c.tag}</span>
+                  <h3 className="text-lg font-semibold text-warm-white">{c.company}</h3>
+                  <span className="px-2.5 py-1 text-xs font-medium rounded-md bg-primary/10 text-primary/80">{c.tag}</span>
                 </div>
-                <p className="text-xs text-primary/50 mb-2 leading-relaxed">{c.pain}</p>
-                <div className="flex items-start gap-2 text-xs text-warm-gray leading-relaxed">
+                <p className="text-sm text-primary/50 mb-2 leading-relaxed">{c.pain}</p>
+                <div className="flex items-start gap-2 text-sm text-warm-gray leading-relaxed">
                   <ArrowRight size={12} className="text-primary/50 mt-0.5 shrink-0" />
                   {c.solution}
                 </div>
@@ -84,7 +84,7 @@ export default function Cases() {
                       <TrendingUp size={14} className="text-primary/60" />
                       <AnimNum target={r.num} suffix={r.suffix} />
                     </div>
-                    <div className="text-[11px] text-text-muted mt-1">{r.label}</div>
+                    <div className="text-xs text-text-muted mt-1">{r.label}</div>
                   </div>
                 ))}
               </div>

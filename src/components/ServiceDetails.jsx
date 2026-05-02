@@ -76,20 +76,20 @@ export default function ServiceDetails() {
               >
                 <div className="flex items-start gap-5">
                   <div className="flex items-center gap-4 shrink-0">
-                    <span className="font-mono text-xs text-primary/40">{svc.num}</span>
+                    <span className="font-mono text-sm text-primary/40">{svc.num}</span>
                     <div className="w-11 h-11 rounded-xl bg-primary/8 flex items-center justify-center group-hover:bg-primary/12 transition-colors">
                       <Icon size={20} className="text-primary/60" />
                     </div>
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-baseline gap-3 mb-1">
-                      <h3 className="text-base font-semibold text-warm-white/90">{svc.title}</h3>
-                      <span className="text-xs text-primary/50 italic hidden sm:inline">{svc.tagline}</span>
+                      <h3 className="text-lg font-semibold text-warm-white/90">{svc.title}</h3>
+                      <span className="text-sm text-primary/50 italic hidden sm:inline">{svc.tagline}</span>
                     </div>
-                    <p className="text-text-muted text-sm leading-relaxed mb-4">{svc.desc}</p>
+                    <p className="text-text-muted text-base leading-relaxed mb-4">{svc.desc}</p>
                     <div className="flex flex-wrap gap-2">
                       {svc.tags.map(tag => (
-                        <span key={tag} className="px-2.5 py-1 text-[11px] rounded-md text-warm-gray bg-white/[0.03] border border-white/[0.04]">
+                        <span key={tag} className="px-2.5 py-1 text-sm rounded-md text-warm-gray bg-white/[0.03] border border-white/[0.04]">
                           {tag}
                         </span>
                       ))}

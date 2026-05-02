@@ -65,10 +65,10 @@ export default function PainPoints() {
               transition={{ duration: 0.6, delay: 0.15 + i * 0.08, ease: [0.16, 1, 0.3, 1] }}
               className="group grid grid-cols-[auto_1fr_auto] md:grid-cols-[60px_160px_1fr_120px] items-center gap-4 md:gap-6 py-5 border-t border-white/[0.06] first:border-t-0 hover:bg-white/[0.02] transition-colors px-4 -mx-4 rounded-lg"
             >
-              <span className="font-mono text-xs text-primary/50 hidden md:block">{item.num}</span>
+              <span className="font-mono text-sm text-primary/50 hidden md:block">{item.num}</span>
               <h3 className="text-lg font-semibold text-warm-white/90">{item.title}</h3>
-              <p className="text-sm text-warm-gray leading-relaxed col-span-full md:col-span-1">{item.desc}</p>
-              <span className="font-mono text-[10px] tracking-widest uppercase text-text-muted/50 justify-self-end hidden md:block">{item.tag}</span>
+              <p className="text-base text-warm-gray leading-relaxed col-span-full md:col-span-1">{item.desc}</p>
+              <span className="font-mono text-xs tracking-widest uppercase text-text-muted/50 justify-self-end hidden md:block">{item.tag}</span>
             </motion.div>
           ))}
         </div>
