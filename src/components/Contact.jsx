@@ -35,7 +35,7 @@ export default function Contact() {
                 return (
                   <div key={item.label} className="flex items-center gap-3 text-left">
                     <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center">
-                      <Icon size={16} className="text-primary/60" />
+                      <Icon size={16} className="text-primary/80" />
                     </div>
                     <div>
                       <div className="text-xs text-text-muted uppercase tracking-wider">{item.label}</div>
@@ -46,7 +46,7 @@ export default function Contact() {
               })}
             </div>
 
-            <p className="text-sm text-text-muted/50 mb-8">联系人：得否</p>
+            <p className="text-sm text-text-muted mb-8">联系人：得否</p>
 
             <a href="mailto:wangyang@defou.ai" className="group inline-flex items-center gap-2 px-10 py-4 rounded-2xl bg-primary hover:bg-primary-light text-[#09090b] font-semibold text-lg transition-all duration-300 hover:shadow-[0_0_40px_rgba(217,119,6,0.2)]">
               立即联系

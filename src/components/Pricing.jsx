@@ -82,13 +82,13 @@ export default function Pricing() {
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center">
-                  <Compass size={18} className="text-primary/60" />
+                  <Compass size={18} className="text-primary/80" />
                 </div>
-                <h3 className="text-lg font-semibold text-warm-white/90">帮你看清方向</h3>
+                <h3 className="text-lg font-semibold text-warm-white">帮你看清方向</h3>
               </div>
               {consultTraining.consult.map(item => (
                 <div key={item.name} className="flex items-center justify-between py-4 border-t border-white/[0.06]">
-                  <span className="text-warm-white/80 font-medium text-base">{item.name}</span>
+                  <span className="text-warm-white font-medium text-base">{item.name}</span>
                   <span className="font-mono text-primary/80 font-semibold text-base">¥{item.price}</span>
                 </div>
               ))}
@@ -96,13 +96,13 @@ export default function Pricing() {
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center">
-                  <GraduationCap size={18} className="text-primary/60" />
+                  <GraduationCap size={18} className="text-primary/80" />
                 </div>
-                <h3 className="text-lg font-semibold text-warm-white/90">帮你团队会用</h3>
+                <h3 className="text-lg font-semibold text-warm-white">帮你团队会用</h3>
               </div>
               {consultTraining.training.map(item => (
                 <div key={item.name} className="flex items-center justify-between py-4 border-t border-white/[0.06]">
-                  <span className="text-warm-white/80 font-medium text-base">{item.name}</span>
+                  <span className="text-warm-white font-medium text-base">{item.name}</span>
                   <span className="font-mono text-primary/80 font-semibold text-base">¥{item.price}</span>
                 </div>
               ))}
@@ -125,11 +125,11 @@ export default function Pricing() {
                 <div className="text-base text-warm-gray">
                   {p.before} → <span className="text-primary/80 font-medium">{p.after}</span>
                 </div>
-                <div className="text-sm text-text-muted/50 hidden md:block">{p.pain}</div>
+                <div className="text-sm text-text-muted hidden md:block">{p.pain}</div>
                 <div className="text-right font-mono text-primary/80 font-semibold text-base">¥{p.price}</div>
               </div>
             ))}
-            <p className="text-sm text-text-muted/40 mt-6 px-4">多产品打包有折扣 / 定制开发 ¥20,000 起 / 算力充值按量计费</p>
+            <p className="text-sm text-text-muted mt-6 px-4">多产品打包有折扣 / 定制开发 ¥20,000 起 / 算力充值按量计费</p>
           </motion.div>
         )}
 
@@ -145,7 +145,7 @@ export default function Pricing() {
                 key={c.plan}
                 className={`glass-card rounded-2xl p-8 transition-all duration-500 hover:-translate-y-1 ${c.featured ? 'border-primary/15 hover:shadow-[0_20px_50px_-15px_rgba(217,119,6,0.1)]' : ''}`}
               >
-                <span className="font-mono text-sm text-primary/50 tracking-widest uppercase">{c.plan}</span>
+                <span className="font-mono text-sm text-primary/80 tracking-widest uppercase">{c.plan}</span>
                 <h3 className="text-xl font-bold text-warm-white mt-3 mb-2">{c.name}</h3>
                 <p className="text-base text-warm-gray mb-6">{c.scope}</p>
                 <div className="text-4xl font-bold text-warm-white">
@@ -176,7 +176,7 @@ export default function Pricing() {
                     </div>
                   )}
                   <div className="w-12 h-12 mx-auto mb-5 rounded-xl bg-primary/8 flex items-center justify-center group-hover:bg-primary/12 transition-colors">
-                    <Icon size={22} className="text-primary/70" />
+                    <Icon size={22} className="text-primary/90" />
                   </div>
                   <h3 className="text-xl font-bold text-warm-white mb-2">{pkg.name}</h3>
                   <p className="text-base text-warm-gray mb-6">{pkg.desc}</p>
@@ -196,7 +196,7 @@ export default function Pricing() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center text-sm text-text-muted/50 mt-10"
+          className="text-center text-sm text-text-muted mt-10"
         >
           具体费用以实际需求沟通后的正式报价为准
         </motion.p>

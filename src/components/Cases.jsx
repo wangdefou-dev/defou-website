@@ -68,11 +68,11 @@ export default function Cases() {
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold text-warm-white">{c.company}</h3>
-                  <span className="px-2.5 py-1 text-xs font-medium rounded-md bg-primary/10 text-primary/80">{c.tag}</span>
+                  <span className="px-2.5 py-1 text-xs font-medium rounded-md bg-primary/10 text-primary">{c.tag}</span>
                 </div>
-                <p className="text-sm text-primary/50 mb-2 leading-relaxed">{c.pain}</p>
+                <p className="text-sm text-primary mb-2 leading-relaxed">{c.pain}</p>
                 <div className="flex items-start gap-2 text-sm text-warm-gray leading-relaxed">
-                  <ArrowRight size={12} className="text-primary/50 mt-0.5 shrink-0" />
+                  <ArrowRight size={12} className="text-primary mt-0.5 shrink-0" />
                   {c.solution}
                 </div>
               </div>
@@ -81,7 +81,7 @@ export default function Cases() {
                 {c.results.map(r => (
                   <div key={r.label} className="p-5 text-center border-r last:border-r-0 border-white/[0.03]">
                     <div className="text-2xl font-bold text-warm-white flex items-center justify-center gap-1">
-                      <TrendingUp size={14} className="text-primary/60" />
+                      <TrendingUp size={14} className="text-primary" />
                       <AnimNum target={r.num} suffix={r.suffix} />
                     </div>
                     <div className="text-xs text-text-muted mt-1">{r.label}</div>

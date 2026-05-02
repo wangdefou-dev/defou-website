@@ -106,9 +106,9 @@ export default function Products() {
                     <div>
                       <div className="flex items-baseline gap-2">
                         <h3 className="text-xl font-bold text-warm-white">{product.name}</h3>
-                        <span className="text-sm text-text-muted/50 font-mono italic">{product.en}</span>
+                        <span className="text-sm text-text-muted font-mono italic">{product.en}</span>
                       </div>
-                      <p className="text-sm text-primary/60 mt-0.5">{product.subtitle}</p>
+                      <p className="text-sm text-primary/80 mt-0.5">{product.subtitle}</p>
                     </div>
                   </div>
                   <span className="px-2.5 py-1 text-xs font-semibold rounded-md" style={{ background: `${product.accent}12`, color: `${product.accent}cc` }}>
@@ -116,7 +116,7 @@ export default function Products() {
                   </span>
                 </div>
 
-                <p className="text-base text-warm-gray/80 mb-5 leading-relaxed">{product.tagline}</p>
+                <p className="text-base text-warm-gray mb-5 leading-relaxed">{product.tagline}</p>
 
                 <ul className="space-y-3">
                   {product.features.map(f => (

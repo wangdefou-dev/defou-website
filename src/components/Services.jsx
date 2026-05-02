@@ -44,10 +44,10 @@ export default function Services() {
                 >
                   <div className="glass-card glass-card-hover rounded-2xl p-6 text-center transition-all duration-500 hover:-translate-y-1">
                     <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-primary/8 flex items-center justify-center group-hover:bg-primary/12 transition-colors">
-                      <Icon size={20} className="text-primary/70" />
+                      <Icon size={20} className="text-primary/90" />
                     </div>
-                    <div className="text-sm font-mono text-primary/60 mb-2">{step.num}</div>
-                    <h3 className="text-warm-white/90 font-semibold mb-2 text-base">{step.title}</h3>
+                    <div className="text-sm font-mono text-primary/80 mb-2">{step.num}</div>
+                    <h3 className="text-warm-white font-semibold mb-2 text-base">{step.title}</h3>
                     <p className="text-text-muted text-sm leading-relaxed">{step.desc}</p>
                   </div>
                 </motion.div>

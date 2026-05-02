@@ -13,7 +13,7 @@ export default function Quote() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-xs font-mono text-primary/40 tracking-[0.3em] uppercase mb-8"
+          className="text-xs font-mono text-primary/70 tracking-[0.3em] uppercase mb-8"
         >
           The Belief
         </motion.div>
@@ -36,7 +36,7 @@ export default function Quote() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 1 }}
-          className="mt-8 text-sm text-text-muted/50"
+          className="mt-8 text-sm text-text-muted"
         >
           — 得否科技 · DeFou Tech
         </motion.div>
