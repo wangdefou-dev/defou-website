@@ -4,7 +4,6 @@ import { Menu, X } from 'lucide-react'
 const navItems = [
   { label: '痛点', href: '#pain-points' },
   { label: '服务', href: '#services' },
-  { label: '案例', href: '#cases' },
 ]
 
 const navLinkClass = "px-4 py-2 text-sm font-bold text-warm-gray hover:text-warm-white rounded-lg hover:bg-white/[0.03] transition-all duration-300"
