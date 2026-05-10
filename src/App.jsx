@@ -6,7 +6,6 @@ import Services from './components/Services'
 import ServiceDetails from './components/ServiceDetails'
 import Cases from './components/Cases'
 import Quote from './components/Quote'
-import Process from './components/Process'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -104,7 +103,6 @@ export default function App() {
         <ServiceDetails />
         <Cases />
         <Quote />
-        <Process />
         <Contact />
         <Footer />
       </div>
