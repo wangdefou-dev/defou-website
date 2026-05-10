@@ -30,12 +30,6 @@ const cases = [
     solution: '部署招聘 Agent，自动完成简历初筛与匹配打分',
     results: [{ num: '70', suffix: '%', label: '筛选效率提升' }, { num: '40', suffix: '%', label: '招聘周期缩短' }],
   },
-  {
-    company: '澳门中西创新学院', tag: '新媒体运营',
-    pain: '内容产能不足，多平台运营成本高',
-    solution: '引入新媒体 Agent 辅助选题与文案生成',
-    results: [{ num: '3', suffix: 'x', label: '内容产出量提升' }, { num: '50', suffix: '%', label: '运营人力成本降低' }],
-  },
 ]
 
 export default function Cases() {

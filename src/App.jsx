@@ -3,13 +3,10 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import PainPoints from './components/PainPoints'
 import Services from './components/Services'
-import Products from './components/Products'
 import ServiceDetails from './components/ServiceDetails'
 import Cases from './components/Cases'
 import Quote from './components/Quote'
 import Process from './components/Process'
-import Team from './components/Team'
-import Pricing from './components/Pricing'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -104,13 +101,10 @@ export default function App() {
         <Hero />
         <PainPoints />
         <Services />
-        <Products />
         <ServiceDetails />
         <Cases />
         <Quote />
         <Process />
-        <Team />
-        <Pricing />
         <Contact />
         <Footer />
       </div>
