@@ -29,12 +29,6 @@ const coreTeam = [
   },
 ]
 
-const lecturers = [
-  { name: '王强', title: '哈尔滨工业大学工学博士，深圳大学大数据研究院院长助理', tag: 'Big Data' },
-  { name: '陈奕昆', title: '北航物理学院博士，广东智云城建科技有限公司 CEO', tag: 'AI + City' },
-  { name: 'Roland Wayne', title: '昆士兰大学医学院博士生，香港瀚宇医略首席执行官', tag: 'AI + Health' },
-  { name: '王英杰', title: '星河产业集团产城研究院执行院长', tag: 'Industry' },
-]
 
 export default function Team() {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true })
@@ -85,32 +79,6 @@ export default function Team() {
               </motion.div>
             )
           })}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mb-6"
-        >
-          <h3 className="text-sm font-mono text-primary/80 tracking-widest uppercase mb-5">Expert Faculty · 讲师团队</h3>
-          <p className="text-base text-warm-gray mb-6">横跨学术界与产业界，覆盖 AI 技术、大数据、商业策略、组织管理、医疗健康等多领域</p>
-        </motion.div>
-
-        <div className="space-y-0">
-          {lecturers.map((l, i) => (
-            <motion.div
-              key={l.name}
-              initial={{ opacity: 0, x: -20 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.35 + i * 0.06, ease: [0.16, 1, 0.3, 1] }}
-              className="grid grid-cols-[120px_1fr_auto] md:grid-cols-[140px_1fr_100px] items-center gap-4 py-4 border-t border-white/[0.06] hover:bg-white/[0.02] transition-colors px-4 -mx-4 rounded-lg"
-            >
-              <h4 className="text-warm-white font-semibold text-base">{l.name}</h4>
-              <p className="text-sm text-text-muted leading-relaxed">{l.title}</p>
-              <span className="font-mono text-xs tracking-widest uppercase text-text-muted/80 justify-self-end">{l.tag}</span>
-            </motion.div>
-          ))}
         </div>
       </div>
     </section>
