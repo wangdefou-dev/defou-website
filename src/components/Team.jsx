@@ -33,7 +33,6 @@ const lecturers = [
   { name: '王强', title: '哈尔滨工业大学工学博士，深圳大学大数据研究院院长助理', tag: 'Big Data' },
   { name: '陈奕昆', title: '北航物理学院博士，广东智云城建科技有限公司 CEO', tag: 'AI + City' },
   { name: 'Roland Wayne', title: '昆士兰大学医学院博士生，香港瀚宇医略首席执行官', tag: 'AI + Health' },
-  { name: '孔明', title: '心理学博士，世界五百强营销负责人，ICF 国际大师级教练', tag: 'Leadership' },
   { name: '王英杰', title: '星河产业集团产城研究院执行院长', tag: 'Industry' },
 ]
 
